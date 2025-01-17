@@ -4,7 +4,7 @@ const { test, expect } = require('@playwright/test');
 test.describe('My Test Suite', () => {
     test('My Test Case', async({page}) => {
         //test.setTimeout(120_000);
-        //const browser = await chromium.launch();
+        const browser = await chromium.launch();
         //const page = await browser.newPage();
         //await page.goto('https://bitheap.tech');
         //await page.screenshot({ path: 'screenshot.png'});
