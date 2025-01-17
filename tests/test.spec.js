@@ -1,10 +1,10 @@
-const { chromium } = require('playwright');
+const { firefox } = require('playwright');
 const { test, expect } = require('@playwright/test');
 
 test.describe('My Test Suite', () => {
     test('My Test Case', async({page}) => {
         //test.setTimeout(120_000);
-        const browser = await chromium.launch();
+        const browser = await firefox.launch();
         //const page = await browser.newPage();
         //await page.goto('https://bitheap.tech');
         //await page.screenshot({ path: 'screenshot.png'});
@@ -15,7 +15,7 @@ test.describe('My Test Suite', () => {
 
         await placeOrder(page);
     
-        //await browser.close();
+        await browser.close();
     });
 });
 
