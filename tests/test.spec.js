@@ -48,7 +48,7 @@ async function prepareOrder(page) {
 
 async function placeOrder(page) {    
     await page.locator('body > div.cky-consent-container.cky-box-bottom-left > div > div > div > div.cky-notice-btn-wrapper > button.cky-btn.cky-btn-accept').click();
-    //await page.locator('body > div.fc-consent-root > div.fc-dialog-container > div.fc-dialog.fc-choice-dialog > div.fc-footer-buttons-container > div.fc-footer-buttons > button.fc-button.fc-cta-consent.fc-primary-button > p').click();
+    await page.locator('body > div.fc-consent-root > div.fc-dialog-container > div.fc-dialog.fc-choice-dialog > div.fc-footer-buttons-container > div.fc-footer-buttons > button.fc-button.fc-cta-consent.fc-primary-button > p').click();
     await page.locator('xpath=//*[@id="billing_postcode"]').fill("1234");
     await page.locator('css=#billing_city').fill("Zurich");
     //await page.screenshot({path: 'screenshot4.png'});
